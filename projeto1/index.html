@@ -19,22 +19,25 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="">Sobre nós</a>
+                        <a href="#about">Sobre nós</a>
                     </li>
                     <li>
-                        <a href="">Contato</a>
+                        <a href="#contact">Contato</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section>
+    <section id="about">
         <div class="container">
             <img class="store-front" src="./images/PUBG Camp.jpg" alt="PUBG series">
             <div>
                 <h2>Sobre o Camp</h2>
                 <p>
                     No PUBG Camp, nossa missão é levar a experiência de PlayerUnknown's Battlegrounds para o próximo nível, e nossa página dedicada aos campeonatos é o epicentro da competição e da emoção. Aqui, você encontrará tudo o que precisa para se manter atualizado com os torneios mais emocionantes, acompanhar seus times e jogadores favoritos, e até mesmo se preparar para entrar na arena com sua própria equipe!
+                </p>
+                <p>
+                    Uma das principais características do PUBG Camp é a sua seção de cobertura ao vivo, que permite que os espectadores acompanhem as partidas em tempo real, com atualizações instantâneas sobre os desempenhos das equipes e jogadores. Além disso, o site disponibiliza retransmissões e destaques das partidas, permitindo que os fãs revisitem momentos cruciais e jogadas impressionantes.
                 </p>
                 <p>
                     O PUBG Camp é mais do que apenas um site de campeonatos; é uma comunidade apaixonada por esports e pela arte do jogo. Nossa equipe dedicada trabalha para garantir que você tenha acesso às informações mais precisas e atuais, além de uma plataforma que celebra cada momento emocionante do mundo dos campeonatos de PUBG.Seja você um fã ávido, um jogador competitivo ou apenas alguém que gosta de ver um bom jogo, nossa página de campeonatos é o seu destino principal para tudo relacionado ao mundo dos torneios de PUBG. Junte-se a nós, entre no jogo e viva a emoção do combate até o último jogador!
@@ -50,14 +53,14 @@
     <section id="contact">
         <div class="container">
             <h2>Contato</h2>
-            <div clas="contact-methods">
+            <div class="contact-methods">
                 <div>
                     <h3>Fale conosco</h3>
                     <form>
-                        <input type="text" placeholder="Seu nome">
-                        <input type="email" placeholder="Seu e-mail">
+                        <input type="text" placeholder="Seu nome" required />
+                        <input type="email" placeholder="Seu e-mail" required />
                         <input type="tel" placeholder="Seu telefone (opcional)">
-                        <textarea placeholder="Sua mensagem"></textarea>
+                        <textarea placeholder="Sua mensagem" required ></textarea>
                         <button type="submit">Enviar</button>
                     </form>
                 </div>
@@ -90,5 +93,12 @@
             </div>
         </div>
     </section>
+    <footer>
+        <div class="container">
+            <p>
+                &copy; PUBG Camp - Todos os direitos reservados - 2024
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

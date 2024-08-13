@@ -12,7 +12,9 @@ form button {
     font-weight: bold;
 }
 
-body {
+body,
+input,
+textarea {
     font-family: "Libre Franklin", sans-serif;
 }
 
@@ -109,6 +111,7 @@ form button {
 
 form textarea {
     resize: none;
+    height: 180px;
 }
 
 section h3 {
@@ -122,6 +125,16 @@ form button {
     cursor: pointer;
 }
 
-form button :hover {
-    background-color: rgb(48, 45, 45);
+form button:hover {
+    background-color: rgb(29, 28, 28);
+}
+
+input:focus, textarea:focus {
+    outline: black;
+}
+
+footer {
+    background-color: black;
+    color: rgb(247, 182, 6);
+    padding: 16px 0;
 }
