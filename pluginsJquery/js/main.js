@@ -29,7 +29,7 @@ $(document).ready(function(){
             }
         },
         messages: {
-            nome: 'Por favor, insira seu nome'
+            nome: 'Por favor, insira seu nome' ,
         },
         submitHandler: function(form) {
             console.log(form)
