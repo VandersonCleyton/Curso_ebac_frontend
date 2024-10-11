@@ -80,7 +80,7 @@
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li>
-                    <img src="./images/carro-bmw.png" alt="">
+                    <img src="./images/fusca.png" alt="">
                     <h3>Carro BMW</h3>
                     <p>
                     Câmbio automático, 4 portas, vidros e travas elétricas.
@@ -91,7 +91,7 @@
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li>
-                    <img src="./images/carro-bmw.png" alt="">
+                    <img src="./images/moto-bmw.png" alt="">
                     <h3>Carro BMW</h3>
                     <p>
                 Câmbio automático, 4 portas, vidros e travas elétricas.
@@ -122,7 +122,7 @@
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li>
-                    <img src="./images/carro-bmw.png" alt="">
+                    <img src="./images/fusca.png" alt="">
                     <h3>Carro BMW</h3>
                     <p>
                     Câmbio automático, 4 portas, vidros e travas elétricas.
@@ -134,7 +134,7 @@
                     <button type="button">Tenho interesse</button>
                 </li>
                 <li>
-                    <img src="./images/carro-bmw.png" alt="">
+                    <img src="./images/moto-bmw.png" alt="">
                     <h3>Carro BMW</h3>
                     <p>
                 Câmbio automático, 4 portas, vidros e travas elétricas.
@@ -149,29 +149,29 @@
         </div>
     </section>
 
-    <section>
+    <section id="contato">
         <div class="container">
             <h2>Entre em contato</h2>
             <form>
                 <div class="form-campo">
                     <label for="nome">Nome</label>
-                    <input type="text" id="nome">
+                    <input type="text" id="nome" name="nome">
                 </div>
                 <div class="form-campo">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone">
+                    <input type="tel" id="telefone" name="telefone">
                 </div>
                 <div class="form-campo">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email">
                 </div>
                 <div class="form-campo">
                     <label for="veiculo-interesse">Veículo de interesse</label>
-                    <input type="text" id="veiculo-interesse">
+                    <input type="text" id="veiculo-interesse" name="veiculoDeInteresse">
                 </div>
                 <div class="form-campo">
                     <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem"></textarea>
+                    <textarea id="mensagem" name="mensagem"></textarea>
                 </div>
                 <button type="submit">Enviar</button>
             </form>
@@ -206,17 +206,10 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('#carousel-imagens').slick({
-                    autoplay:true,
-                });
-
-                $('.menu-hamburguer').click(function() {
-                    $('nav').slideToggle();
-                })
-            })
-        </script>
+        <script src="./js/jquery.mask.min.js"></script>
+        <script src="./js/jquery.validate.min.js"></script>
+        <script src="./js/messages_pt_BR.min.js"></script>
+        <script src="./js/main.js"></script>
 </body>
 
 </html>
