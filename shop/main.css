@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+header {
+    background-color: #2b2b2b;
+    color: #00ff00; /* Verde neon */
+    text-align: center;
+    padding: 1em 0;
+}
+
+.carrossel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+button {
+    background-color: #00ff00; /* Verde neon */
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.sobre-loja {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.coluna-imagem, .coluna-texto {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.produtos {
+    padding: 20px;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.produto {
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-form {
+    display: none;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2b2b2b;
+    z-index: 10;
+}
+
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.icon {
+    color: #00ff00; /* Verde neon */
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2b2b2b;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .produto {
+        flex: 1 1 calc(50% - 20px); /* 2 produtos por linha em telas menores que 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        flex: 1 1 100%; /* 1 produto por linha em telas menores que 480px */
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Games</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Nossa Loja de Games</h1>
+        <button id="contact-toggle">Contato</button>
+    </header>
+
+    <section class="carrossel">
+        <div class="slides">
+            <div class="slide active"><img src="imagem1.jpg" alt="Imagem 1"></div>
+            <div class="slide"><img src="imagem2.jpg" alt="Imagem 2"></div>
+            <div class="slide"><img src="imagem3.jpg" alt="Imagem 3"></div>
+        </div>
+    </section>
+
+    <section class="sobre-loja">
+        <div class="coluna-imagem">
+            <img src="imagem-da-loja.jpg" alt="Imagem da loja">
+        </div>
+        <div class="coluna-texto">
+            <h2>Sobre a Loja</h2>
+            <p>A nossa loja oferece os melhores jogos com a melhor qualidade. Estamos comprometidos em proporcionar uma experiência de compra excepcional.</p>
+        </div>
+    </section>
+
+    <section class="produtos">
+        <h2>Produtos</h2>
+        <div class="lista-produtos">
+            <div class="produto">
+                <img src="produto1.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do produto 1.</p>
+                <button onclick="showInterestForm()">Interesse</button>
+            </div>
+            <div class="produto">
+                <img src="produto2.jpg" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>Descrição do produto 2.</p>
+                <button onclick="showInterestForm()">Interesse</button>
+            </div>
+            <div class="produto">
+                <img src="produto3.jpg" alt="Produto 3">
+                <h3>Produto 3</h3>
+                <p>Descrição do produto 3.</p>
+                <button onclick="showInterestForm()">Interesse</button>
+            </div>
+            <div class="produto">
+                <img src="produto4.jpg" alt="Produto 4">
+                <h3>Produto 4</h3>
+                <p>Descrição do produto 4.</p>
+                <button onclick="showInterestForm()">Interesse</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-form" id="contact-form">
+        <h2>Formulário de Interesse</h2>
+        <form id="interestForm">
+            <input type="text" placeholder="Seu Nome" required>
+            <input type="email" placeholder="Seu E-mail" required>
+            <textarea placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <button onclick="hideInterestForm()">Fechar</button>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="instagram"></i></a>
+            <a href="#" class="icon"><i class="facebook"></i></a>
+            <a href="#" class="icon"><i class="youtube"></i></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Nossa Loja de Games. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
