@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empório Games</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Empório Games</div>
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <button class="close-menu" onclick="toggleMenu()">✖</button>
+            <div class="menu-item" onclick="scrollToSection('sobre')">Sobre</div>
+            <div class="menu-item" onclick="scrollToSection('produtos')">Produtos</div>
+            <div class="menu-item" onclick="scrollToSection('carrinho')">Carrinho</div>
+            <div class="menu-item" onclick="scrollToSection('contato')">Contato</div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <div class="sobre-container">
+                <div class="imagem-loja">
+                    <img src="./imagens/loja.png" alt="Foto da Loja - Empório Games">
+                </div>
+                <div class="sobre-texto">
+                    <h2>Sobre a Empório Games</h2>
+                    <p>Seja bem-vindo ao Empório Games, o seu santuário de diversão e aventura! Aqui, somos apaixonados por jogos e tudo que envolve esse universo incrível.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="produtos-container">
+                <div class="produto">
+                    <img src="./imagens/ps5.jpg" alt="Playstation 5 Bundle Slim">
+                    <h3>Playstation 5 Bundle Slim</h3>
+                    <p>Console Ps5 Slim Digital 1TB com jogos. Jogue como nunca antes com uma inicialização quase instantânea e qualidade HDR.</p>
+                    <p>Preço: R$4999.99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/xbox-x.png" alt="Console Xbox Series X 1TB">
+                    <h3>Console Xbox Series X 1TB</h3>
+                    <p>Experimente poder, rapidez e uma vasta biblioteca de jogos com gráficos impressionantes e velocidade de carregamento.</p>
+                    <p>Preço: R$4999.99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/switch.jpg" alt="Nintendo Switch Oled">
+                    <h3>Nintendo Switch Oled</h3>
+                    <p>O novo sistema apresenta uma tela OLED vibrante e 64 GB de armazenamento interno, com áudio aprimorado.</p>
+                    <p>Preço: R$2999.99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+                <div class="produto">
+                    <img src="./imagens/pcgamer.png" alt="Pc Gamer Completo Intel Core I7">
+                    <h3>Pc Gamer Completo Intel Core I7</h3>
+                    <p>Jogue os melhores títulos em alta definição e FPS. Potência e desempenho para todas as suas aventuras de jogos!</p>
+                    <p>Preço: R$4999.99</p>
+                    <button>Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="carrinho">
+            <h2>Carrinho de Compras</h2>
+            <div id="carrinho-container"></div>
+            <button id="finalizar-compra" style="margin-top: 20px;">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <footer>
+        <section id="contato">
+            <h2>Contato</h2>
+            <form id="contato-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <textarea placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <p>&copy; 2024 Empório Games. Todos os direitos reservados.</p>
+        <ul class="container-flex">
+            <li>
+                <a href="a">
+                    <img src="./icones/facebook.png" alt="Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="a">
+                    <img src="./icones/instagram.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="a">
+                    <img src="./icones/youtube.png" alt="Youtube">
+                </a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
