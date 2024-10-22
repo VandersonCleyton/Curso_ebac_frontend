@@ -8,7 +8,7 @@ body {
     padding: 0;
     background-color: #111;
     color: #fff;
-    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-x: hidden;
 }
 
 header {
@@ -17,8 +17,8 @@ header {
     align-items: center;
     background-color: #000;
     padding: 20px;
-    position: relative; /* Necessário para o menu */
-    z-index: 10; /* Para garantir que fique acima de outros elementos */
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
@@ -42,17 +42,17 @@ header {
 }
 
 .menu {
-    display: none; /* Oculto por padrão */
-    position: fixed; /* Fixa o menu na tela */
+    display: none;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100%;
-    width: 250px; /* Largura do menu */
+    width: 250px;
     background-color: #222;
-    padding-top: 60px; /* Espaço para o header */
+    padding-top: 60px;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
     flex-direction: column;
-    z-index: 100; /* Fica acima de outros elementos */
+    z-index: 100;
 }
 
 .close-menu {
@@ -73,34 +73,13 @@ header {
 }
 
 .menu-item:hover {
-    background-color: #333; /* Efeito hover */
-}
-
-.carrossel {
-    position: relative;
-    max-width: 100%;
-    margin: 10px auto;
-    overflow: hidden;
-}
-
-.carrossel-imagens {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carrossel-imagens img {
-    min-width: 100%;
-    border-radius: 5px;
+    background-color: #333;
 }
 
 .sobre-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0;
-}
-
-.imagem-loja {
     margin: 20px 0;
 }
 
@@ -132,12 +111,17 @@ header {
 }
 
 button {
-    background-color: #39ff14; /* Verde neon */
+    background-color: #39ff14;
     color: #000;
     border: none;
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #32c12b; /* Efeito ao passar o mouse */
 }
 
 form {
@@ -176,16 +160,16 @@ footer li img {
 
 .container-flex {
     display: flex;
-    justify-content: flex-end; /* Alinha ícones à esquerda */
+    justify-content: flex-end;
     padding: 10px 0;
 }
 
 h2 {
-    font-size: 24px; /* Tamanho da fonte para os títulos das seções */
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 20px; /* Tamanho da fonte para os títulos dos produtos */
+    font-size: 20px;
 }
 
 /* Media Queries para Responsividade */
@@ -196,8 +180,8 @@ h3 {
     }
 
     .produto {
-        width: 90%; /* Produtos ocupam 90% da largura */
-        margin: 10px 0; /* Margem em cima e embaixo */
+        width: 90%;
+        margin: 10px 0;
     }
 
     .sobre-container {
@@ -216,10 +200,10 @@ h3 {
     }
 
     .logo {
-        font-size: 28px; /* Diminuir o tamanho da fonte no logo */
+        font-size: 28px;
     }
 
     button {
-        width: 100%; /* Botões ocupam 100% da largura em telas pequenas */
+        width: 100%;
     }
 }

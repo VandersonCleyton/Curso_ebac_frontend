@@ -28,19 +28,12 @@
     <main>
         <section id="sobre">
             <div class="sobre-container">
-                <div class="carrossel">
-                    <div class="carrossel-imagens">
-                        <img src="./imagens/slide1.png" alt="Imagem 1">
-                        <img src="./imagens/slide2.png" alt="Imagem 2">
-                        <img src="./imagens/slide3.png" alt="Imagem 3">
-                    </div>
+                <div class="imagem-loja">
+                    <img src="./imagens/loja.png" alt="Foto da Loja - Empório Games">
                 </div>
                 <div class="sobre-texto">
                     <h2>Sobre a Empório Games</h2>
                     <p>Seja bem-vindo ao Empório Games, o seu santuário de diversão e aventura! Aqui, somos apaixonados por jogos e tudo que envolve esse universo incrível.</p>
-                </div>
-                <div class="imagem-loja">
-                    <img src="./imagens/loja.png" alt="Foto da Loja">
                 </div>
             </div>
         </section>
@@ -49,27 +42,31 @@
             <h2>Produtos</h2>
             <div class="produtos-container">
                 <div class="produto">
-                    <img src="./imagens/ps5.jpg" alt="Produto 1">
-                    <h3>Produto 1</h3>
-                    <p>Descrição do produto 1.</p>
+                    <img src="./imagens/ps5.jpg" alt="Playstation 5 Bundle Slim">
+                    <h3>Playstation 5 Bundle Slim</h3>
+                    <p>Console Ps5 Slim Digital 1TB com jogos. Jogue como nunca antes com uma inicialização quase instantânea e qualidade HDR.</p>
+                    <p>Preço: R$4999.99</p>
                     <button>Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto">
-                    <img src="./imagens/xbox-x.png" alt="Produto 2">
-                    <h3>Produto 2</h3>
-                    <p>Descrição do produto 2.</p>
+                    <img src="./imagens/xbox-x.png" alt="Console Xbox Series X 1TB">
+                    <h3>Console Xbox Series X 1TB</h3>
+                    <p>Experimente poder, rapidez e uma vasta biblioteca de jogos com gráficos impressionantes e velocidade de carregamento.</p>
+                    <p>Preço: R$4999.99</p>
                     <button>Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto">
-                    <img src="./imagens/switch.jpg" alt="Produto 3">
-                    <h3>Produto 3</h3>
-                    <p>Descrição do produto 3.</p>
+                    <img src="./imagens/switch.jpg" alt="Nintendo Switch Oled">
+                    <h3>Nintendo Switch Oled</h3>
+                    <p>O novo sistema apresenta uma tela OLED vibrante e 64 GB de armazenamento interno, com áudio aprimorado.</p>
+                    <p>Preço: R$2999.99</p>
                     <button>Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto">
-                    <img src="./imagens/pcgamer.png" alt="Produto 4">
-                    <h3>Produto 4</h3>
-                    <p>Descrição do produto 4.</p>
+                    <img src="./imagens/pcgamer.png" alt="Pc Gamer Completo Intel Core I7">
+                    <h3>Pc Gamer Completo Intel Core I7</h3>
+                    <p>Jogue os melhores títulos em alta definição e FPS. Potência e desempenho para todas as suas aventuras de jogos!</p>
+                    <p>Preço: R$4999.99</p>
                     <button>Adicionar ao Carrinho</button>
                 </div>
             </div>
@@ -85,7 +82,7 @@
     <footer>
         <section id="contato">
             <h2>Contato</h2>
-            <form id="contato-form">
+            <form id="contato-form" onsubmit="handleSubmit(event)">
                 <input type="text" placeholder="Seu Nome" required>
                 <input type="email" placeholder="Seu Email" required>
                 <textarea placeholder="Sua Mensagem" required></textarea>

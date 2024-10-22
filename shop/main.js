@@ -15,26 +15,7 @@ function scrollToSection(sectionId) {
     document.body.style.overflow = 'auto'; 
 }
 
-
-const images = document.querySelectorAll('.carrossel-imagens img');
-let currentIndex = 0;
-const totalImages = images.length;
-
-function updateCarousel() {
-    const offset = -currentIndex * 100;
-    document.querySelector('.carrossel-imagens').style.transform = `translateX(${offset}%)`;
-}
-
-function autoSlide() {
-    currentIndex = (currentIndex + 1) % totalImages;
-    updateCarousel();
-}
-
-setInterval(autoSlide, 3000);
-
-
 let carrinho = [];
-
 
 function adicionarAoCarrinho(produto) {
     carrinho.push(produto);
@@ -42,11 +23,9 @@ function adicionarAoCarrinho(produto) {
     window.location.hash = 'carrinho'; 
 }
 
-
 function calcularTotal() {
     return carrinho.reduce((total, produto) => total + produto.preco, 0);
 }
-
 
 function mostrarCarrinho() {
     const carrinhoContainer = document.getElementById('carrinho-container');
@@ -69,13 +48,12 @@ function mostrarCarrinho() {
     carrinhoContainer.appendChild(totalDiv);
 }
 
-// Adiciona os event listeners aos botões "Adicionar ao Carrinho"
 document.querySelectorAll('.produto button').forEach((button, index) => {
     const produtos = [
-        { nome: 'Produto 1', preco: 499.99 },
-        { nome: 'Produto 2', preco: 299.99 },
-        { nome: 'Produto 3', preco: 199.99 },
-        { nome: 'Produto 4', preco: 399.99 },
+        { nome: 'Playstation 5 Bundle Slim Digital', preco: 4999.99 },
+        { nome: 'Console Xbox Series X 1TB', preco: 4999.99 },
+        { nome: 'Nintendo Switch Oled', preco: 2999.99 },
+        { nome: 'Pc Gamer Completo Intel Core I7', preco: 4999.99 },
     ];
 
     button.addEventListener('click', () => {
@@ -86,6 +64,46 @@ document.querySelectorAll('.produto button').forEach((button, index) => {
 // Finalizar Compra
 const finalizarCompraButton = document.getElementById('finalizar-compra');
 finalizarCompraButton.addEventListener('click', () => {
-    const contatoForm = document.getElementById('contato');
-    contatoForm.scrollIntoView({ behavior: 'smooth' });
+    const total = calcularTotal();
+    if (carrinho.length === 0) {
+        alert('Seu carrinho está vazio.');
+        return;
+    }
+
+    const confirmation = confirm(`Total: R$${total.toFixed(2)}\nDeseja finalizar a compra?`);
+    if (confirmation) {
+        alert('Compra realizada com sucesso!');
+
+        // Aqui você pode adicionar a lógica para enviar os dados do formulário
+        handleSubmit(); // Chama a função para simular o envio do formulário
+
+        // Recarregar a página após 2 segundos
+        setTimeout(() => {
+            location.reload();
+        }, 2000);
+    }
 });
+
+// Handle form submission
+function handleSubmit(event) {
+    if (event) event.preventDefault(); // Previne o comportamento padrão se o evento for passado
+    alert('Mensagem enviada!'); // Simulação de envio
+    document.getElementById('contato-form').reset(); // Reseta o formulário
+}
+
+// Auto slide do carrossel
+const images = document.querySelectorAll('.carrossel-imagens img');
+let currentIndex = 0;
+const totalImages = images.length;
+
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    document.querySelector('.carrossel-imagens').style.transform = `translateX(${offset}%)`;
+}
+
+function autoSlide() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateCarousel();
+}
+
+setInterval(autoSlide, 3000);
