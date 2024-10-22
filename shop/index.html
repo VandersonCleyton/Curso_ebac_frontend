@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empório Games</title>
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <div class="logo">Empório Games</div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#carrinho">Carrinho</a></li>
-            </ul>
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu">
+            <button class="close-menu" onclick="toggleMenu()">✖</button>
+            <div class="menu-item" onclick="scrollToSection('sobre')">Sobre</div>
+            <div class="menu-item" onclick="scrollToSection('produtos')">Produtos</div>
+            <div class="menu-item" onclick="scrollToSection('carrinho')">Carrinho</div>
+            <div class="menu-item" onclick="scrollToSection('contato')">Contato</div>
         </nav>
     </header>
 
@@ -32,7 +37,7 @@
                 </div>
                 <div class="sobre-texto">
                     <h2>Sobre a Empório Games</h2>
-                    <p>Seja bem-vindo ao Empório Games, o seu santuário de diversão e aventura! Aqui, somos apaixonados por jogos e tudo que envolve esse universo incrível. Nossa missão é proporcionar a você uma experiência única, onde cada clique leva a novas descobertas e momentos inesquecíveis.</p>
+                    <p>Seja bem-vindo ao Empório Games, o seu santuário de diversão e aventura! Aqui, somos apaixonados por jogos e tudo que envolve esse universo incrível.</p>
                 </div>
                 <div class="imagem-loja">
                     <img src="./imagens/loja.png" alt="Foto da Loja">
@@ -50,7 +55,7 @@
                     <button>Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto">
-                    <img src="./imagens/xbox-x.jpg" alt="Produto 2">
+                    <img src="./imagens/xbox-x.png" alt="Produto 2">
                     <h3>Produto 2</h3>
                     <p>Descrição do produto 2.</p>
                     <button>Adicionar ao Carrinho</button>
@@ -62,31 +67,7 @@
                     <button>Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto">
-                    <img src="./imagens/pcgamer.webp" alt="Produto 4">
-                    <h3>Produto 4</h3>
-                    <p>Descrição do produto 4.</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-                <div class="produto">
-                    <img src="produto4.jpg" alt="Produto 5">
-                    <h3>Produto 4</h3>
-                    <p>Descrição do produto 4.</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-                <div class="produto">
-                    <img src="produto4.jpg" alt="Produto 6">
-                    <h3>Produto 4</h3>
-                    <p>Descrição do produto 4.</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-                <div class="produto">
-                    <img src="produto4.jpg" alt="Produto 7">
-                    <h3>Produto 4</h3>
-                    <p>Descrição do produto 4.</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
-                <div class="produto">
-                    <img src="produto4.jpg" alt="Produto 8">
+                    <img src="./imagens/pcgamer.png" alt="Produto 4">
                     <h3>Produto 4</h3>
                     <p>Descrição do produto 4.</p>
                     <button>Adicionar ao Carrinho</button>
@@ -112,6 +93,23 @@
             </form>
         </section>
         <p>&copy; 2024 Empório Games. Todos os direitos reservados.</p>
+        <ul class="container-flex">
+            <li>
+                <a href="a">
+                    <img src="./icones/facebook.png" alt="Facebook">
+                </a>
+            </li>
+            <li>
+                <a href="a">
+                    <img src="./icones/instagram.png" alt="Instagram">
+                </a>
+            </li>
+            <li>
+                <a href="a">
+                    <img src="./icones/youtube.png" alt="Youtube">
+                </a>
+            </li>
+        </ul>
     </footer>
 
     <script src="main.js"></script>
