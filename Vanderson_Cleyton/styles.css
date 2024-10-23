@@ -1,0 +1,211 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, #383838, #000000);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.branding {
+    font-size: 38px;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav a {
+    color: #fff; /* Cor padrão */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s, background-color 0.3s; /* Transições suaves */
+    padding: 10px 15px; /* Espaçamento interno para maior área clicável */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.nav a:hover {
+    color: #00bcd4; /* Cor ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo ao passar o mouse */
+}
+
+.intro {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.about {
+    font-size: 18px;
+    display: flex; /* Mantém a imagem e o texto lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    margin: 40px;
+    justify-content: center;
+}
+
+.about-image {
+    width: 225px; /* Aumentado em 50% */
+    height: 300px; /* Aumentar a altura para evitar cortes */
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: 20px;
+    object-fit: cover; /* Continua a cobrir o espaço */
+}
+
+#conhecimentos {
+    font-size: 20px;
+    text-align: center; /* Centraliza o texto */
+    margin: 40px 0; /* Adiciona margem ao redor da seção */
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 50px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.slider__image {
+    height: 80px;
+    margin: 0 45px; /* Ajuste conforme necessário */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Desloca 50% da largura total do slider */
+    }
+}
+
+
+
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.projects {
+    display: flex;
+    justify-content:space-around;
+    margin: 20px 0;
+}
+
+#projetos h3 {
+    font-size: 20px;
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Adiciona um espaço acima e abaixo do título */
+}
+
+
+.project {
+    text-align: center;
+}
+
+.project img {
+    width: 200px;
+    border-radius: 15px;
+}
+
+/* Estilo para os botões de projetos (se aplicável) */
+.project a {
+    display: inline-block; /* Para aplicar padding e hover */
+    padding: 5px 10px; /* Espaçamento interno */
+    background-color: transparent; /* Fundo transparente */
+    border: 1px solid transparent; /* Bordas iniciais transparentes */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: #fff; /* Cor padrão */
+    transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
+}
+
+.project a:hover {
+    background-color: #00bcd4; /* Fundo ao passar o mouse */
+    border-color: #00bcd4; /* Cor da borda ao passar o mouse */
+}
+
+footer {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Link do currículo */
+footer a.curriculo {
+    color: #fff; /* Cor padrão */
+    text-decoration: underline; /* Sublinhado para destaque */
+    font-weight: bold; /* Aumentar a ênfase */
+    transition: color 0.3s; /* Transição suave */
+}
+
+footer a.curriculo:hover {
+    color: #00bcd4; /* Cor ao passar o mouse */
+}
+
+.socials a {
+    margin: 0 10px;
+    color: #fff; /* Cor padrão */
+    text-decoration: none;
+    transition: color 0.3s; /* Transição suave */
+}
+
+.socials a:hover {
+    color: #00bcd4; /* Cor ao passar o mouse */
+}
+
+#contato {
+    padding: 20px;
+    text-align: center;
+}
+
+.contato__content {
+    margin-top: 20px;
+}
+
+.contato__content__item__icons {
+    display: flex;
+    justify-content: center;
+    gap: 28px; /* Espaçamento entre os ícones */
+}
+
+.contato__content__item__icons__logo {
+    width: 40px; /* Ajuste o tamanho dos ícones */
+    height: 36px;
+    color: #494949; /* Cor padrão dos ícones */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.contato__content__item__icons__logo:hover {
+    color: #00bcd4; /* Cor ao passar o mouse */
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .about {
+        flex-direction: column; /* Ajusta para coluna em telas pequenas */
+        align-items: center;
+    }
+    
+    .about-image {
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+}    
